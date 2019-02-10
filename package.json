@@ -37,6 +37,7 @@
     "errorhandler": "^1.5.0",
     "express": "^4.16.2",
     "express-flash": "0.0.2",
+    "express-serve-static-core": "^0.1.1",
     "express-session": "^1.15.6",
     "express-validator": "^4.3.0",
     "fbgraph": "^1.4.1",
@@ -50,6 +51,8 @@
     "pug": "^2.0.0-rc.4",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
+    "routing-controllers": "^0.7.7",
+    "typedi": "^0.8.0",
     "winston": "^2.4.0"
   },
   "devDependencies": {

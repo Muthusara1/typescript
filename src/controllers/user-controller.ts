@@ -1,6 +1,6 @@
 import { Service, Container } from "typedi";
 import { JsonController, Post, Req, Res, Body, Get, Put, Param, Delete } from "routing-controllers";
-import { Response } from "express-serve-static-core";
+import { Response, Request } from "express-serve-static-core";
 import { UserManagementDelegate } from "../delegates/user-delegate";
 import { AddUserRequest } from "../models/request-responses/add-user/addUserRequest";
 
@@ -14,13 +14,12 @@ export class UserManagementController {
     }
 
     @Post("/")
-    async addUser(@Req req: Request, @Res res: Response, @Body addUserRequest: AddUserRequest): Promise<any> {
+    async addUser(@Req() req: Request, @Res() res: Response, @Body() addUserRequest: AddUserRequest): Promise<any> {
         try {
-            const response = await this.userManagementDelegate.addUser(addUserRequest);
-            return res.send(new SuccessResponse(response));
+            
         } catch(err) {
-
         }
+        return res.send("hello");
     }
 
 }

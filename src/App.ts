@@ -1,7 +1,7 @@
 import express = require('express');
 
 class App {
-  public express
+  public express: any;
 
   constructor () {
     this.express = express()

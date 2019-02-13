@@ -1,8 +1,8 @@
 import { Service, Container } from "typedi";
 import { DBManager } from "../utils/db-manager";
 import { AddUserRequest } from "../models/request-responses/add-user/addUserRequest";
-import { AddUserResponse } from "../models/requests-responses/add-user/addUserResponse";
 import { DBQueries } from "../constants/db-queries";
+import { AddUserResponse } from "../models/request-responses/add-user/addUserResponse";
 
 @Service()
 export class UserManagementDelegate {

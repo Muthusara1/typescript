@@ -1,6 +1,5 @@
 import { Service } from "typedi";
 import * as mysql from "mysql";
-import { reject } from "bluebird";
 
 @Service()
 export class DBManager {

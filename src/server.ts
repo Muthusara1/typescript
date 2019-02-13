@@ -15,7 +15,7 @@ const app = express();
 
 // Express configuation
 
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 8800);
 app.use(compression());
 
 app.use(cors());

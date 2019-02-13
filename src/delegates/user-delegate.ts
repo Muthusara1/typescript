@@ -10,6 +10,6 @@ export class UserManagementDelegate {
         this.dbManager = Container.get(DBManager);
     }
     async addUser(addUserRequest: AddUserRequest): Promise<any> {
-        const rowInserted = await this.dbManager.executeQuery()
+        //const rowInserted = await this.dbManager.executeQuery()
     }
 }

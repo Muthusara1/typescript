@@ -7,7 +7,11 @@ export class DBManager {
     private connectionPool: any;
     constructor(){
         this.connectionPool = mysql.createPool({
-            // Database Properties 
+            host: process.env.DB_HOST,
+            user: process.env.DB_USERNAME,
+            password: process.env.DB_PASSWORD,
+            database: process.env.DB_DATABASE,
+            connectionLimit: process.env.DB_CONNECTION_LIMIT
         });
     }
     public async executeQuery(query: string, params?: any): Promise<any> {

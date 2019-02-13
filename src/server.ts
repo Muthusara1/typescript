@@ -13,7 +13,7 @@ dotenv.config({ path: ".env" });
 
 const app = express();
 
-// Express configuation
+// Express configuration
 
 app.set("port", process.env.PORT || 3000);
 app.use(compression());

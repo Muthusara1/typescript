@@ -16,10 +16,12 @@ export class UserManagementController {
     @Post("/")
     async addUser(@Req() req: Request, @Res() res: Response, @Body() addUserRequest: AddUserRequest): Promise<any> {
         try {
-            
-        } catch(err) {
+            const response = await this.userManagementDelegate.addUser(addUserRequest);
+            res.send(true);  
+        } 
+        catch(err) {
+            res.send(err);
         }
-        return res.send("hello");
     }
 
 }
